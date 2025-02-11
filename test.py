@@ -12,3 +12,4 @@ if __name__ == "__main__":
     number = 5
     method = input("Choose method (iterative/recursive): ").strip().lower()
     print(f"Factorial of {number} is {factorial(number, method)}")
+    
