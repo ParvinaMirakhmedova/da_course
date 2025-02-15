@@ -97,7 +97,8 @@ regexp_like(name,'^S')
 select *
 from track
 where 
-regexp_like(name,'m$')
+regexp_like(name,'m$');
+--треки,заканчивающиеся на букву m
 
 select *
 from track
@@ -116,3 +117,12 @@ where
 regexp_like(name,'^[^K].*') 
 
 		--сортировка по цифрам
+
+select 
+	extract (month from invoice_date) as month_id
+	,to char (invoice_date, 'month') as month_name
+	,sum (total) as sales_sum
+from invoice
+where extract(year from invoice_date) = 2021
+group by (month from invoice_date)
+order by month_id;

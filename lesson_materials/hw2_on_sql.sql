@@ -94,7 +94,7 @@ from invoice
 	where
 		extract(year from invoice_date) = 2021
 	group by 
-		(month from invoice_date)
+		month_id
 	order by 
 		month_id;
      
@@ -110,7 +110,7 @@ select
 	,sum (total) as sales_sum
 from invoice
 where extract(year from invoice_date) = 2021
-group by (month from invoice_date), to_char(invoice_date,'month')
+group by month_id, to_char(invoice_date,'month')
 order by month_id;
 
 /*Вытащите список 3 самых возрастных сотрудников компании. Итоговая таблица должна содержать следующие поля:
