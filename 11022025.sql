@@ -71,4 +71,49 @@ where
    where 
    composer is null
 
+  select*
+  from invoice;
+  
+  select
+  sum (total)
+  , avg (total)
+  , min (total)
+  , max (total)
+  , count (distinct customer_id)
+  from invoice;
+  
+  select 
+  distinct customer_id
+  from customer;
+  
+  select distinct
+  country
+  ,state
+  from customer;
+  
+  
+  select 
+  	country
+  	,count(customer_id) as customer_cnt
+  	from customer
+  	where 
+  	country!='USA'
+  	group by 
+  	country
+  having
+  	count(customer_id)>2
+  	
+  	
+  	
+  	select
+  	 country
+  	 , state
+  	 , count(customer_id) as customer_cnt
+  	 from customer
+ group by 
+ country
+ , state
+  	;
+  
+  
   
