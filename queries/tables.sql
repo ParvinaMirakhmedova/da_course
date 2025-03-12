@@ -1,6 +1,6 @@
-create schema if not exists demo_dash;
+create schema if not exists adw_works;
 
-set search_path to demo_dash;
+set search_path to adw_works;
 
 
 create table if not exists customers(

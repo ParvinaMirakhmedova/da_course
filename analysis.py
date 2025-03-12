@@ -4,7 +4,7 @@ from sqlalchemy import text
 
 from connect import set_connection
 
-SCHEMA = "demo_dash"
+SCHEMA = "adw_works"
 
 def create_tables():
     try:
@@ -54,6 +54,3 @@ def etl(sheet_name, columns_dict, tbl_name):
 for k, v in tables_dict.items():
     etl(k, v["columns"], v["table_name"])
 
-
-
-# etl("Customers", tables_dict["Customers"]["columns"], tables_dict["Customers"]["table_name"])
