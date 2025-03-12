@@ -1,0 +1,83 @@
+{
+    "Customers": {
+        "table_name": "customers",
+        "columns": {
+            "CustomerKey": "customer_key",
+            "Name": "full_name",
+            "BirthDate": "date_of_birth",
+            "MaritalStatus": "marital_status",
+            "Gender": "gender",
+            "YearlyIncome": "yearly_income",
+            "NumberChildrenAtHome": "number_of_children",
+            "Occupation": "occupation",
+            "HouseOwnerFlag": "house_owner_flag",
+            "NumberCarsOwned": "number_cars_owned",
+            "DateFirstPurchase": "first_purchase_date"
+        }
+    },
+    "Territory": {
+        "table_name": "territory",
+        "columns": {
+            "Territory Key": "territory_key",
+            "Region": "region",
+            "Country": "country",
+            "Group": "geo_group"
+        }
+    },
+    "ProductCategory": {
+        "table_name": "product_category",
+        "columns": {
+            "ProductCategoryKey": "category_key",
+            "EnglishProductCategoryName": "category_name"
+        }
+    },
+    "ProductSubCategory": {
+        "table_name": "product_subcategory",
+        "columns": {
+            "ProductSubcategoryKey": "subcategory_key",
+            "EnglishProductSubcategoryName": "subcategory_name",
+            "ProductCategoryKey": "category_key"
+        }
+    },
+    "Products": {
+        "table_name": "products",
+        "columns": {
+            "ProductKey": "product_key",
+            "ProductSubcategoryKey": "subcategory_key",
+            "ProductName": "product_name",
+            "StandardCost": "standard_cost",
+            "Color": "color",
+            "SafetyStockLevel": "safety_stock_level",
+            "ListPrice": "list_price",
+            "Size": "product_size",
+            "Weight": "product_weight",
+            "DaysToManufacture": "days_to_manufacture",
+            "ProductLine": "product_line",
+            "DealerPrice": "dealer_price",
+            "Class": "product_class",
+            "ModelName": "model_name",
+            "Description": "product_description",
+            "StartDate": "start_date",
+            "EndDate": "end_date",
+            "Status": "product_status"
+        }
+    },
+    "Sales": {
+        "table_name": "sales",
+        "columns": {
+            "ProductKey": "product_key",
+            "OrderDate": "order_date",
+            "OrderDateKey": "order_datekey",
+            "CustomerKey": "customer_key",
+            "SalesTerritoryKey": "territory_key",
+            "SalesOrderNumber": "sales_order_number",
+            "SalesOrderLineNumber": "sales_order_line_number",
+            "OrderQuantity": "order_quantity",
+            "UnitPrice": "unit_price",
+            "TotalProductCost": "total_product_cost",
+            "SalesAmount": "sales_amount",
+            "TaxAmt": "tax_amount",
+            "Freight": "freight"
+        }
+    }
+}
